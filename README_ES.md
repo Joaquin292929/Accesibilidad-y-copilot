@@ -105,6 +105,18 @@ Previsualización de la página:
 ![alt text](image-11.png)
 ![alt text](image-12.png)
 
+Resultado de las herramientas de validacion de accesibilidad:
+
+Lighthouse:
+![alt text](image-15.png)
+
+Wave:
+![alt text](image-13.png)
+
+Axe DevTools:
+![alt text](image-14.png)
+
+
 Mejoras Aplicadas
 
 Meta tags: Añadidos keywords y author.

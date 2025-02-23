@@ -105,6 +105,18 @@ Page preview:
 ![alt text](image-11.png)
 ![alt text](image-12.png)
 
+Accessibility validation tool final results:
+
+Lighthouse:
+![alt text](image-15.png)
+
+Wave:
+![alt text](image-13.png)
+
+Axe DevTools:
+![alt text](image-14.png)
+
+
 Applied Improvements
 
 Meta tags: Added keywords and author.
