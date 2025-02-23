@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Cabeceras</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #000;
+        }
+        img {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -16,9 +25,9 @@
 
     <p>A continuación la galeria: </p>
     <h1>Galería</h1>
-    <img src="uploads/gato1.jpg" alt="Descripción de la imagen 1" width="300">
-    <img src="uploads/gato2.jpg" alt="Descripción de la imagen 2" width="300">
-    <img src="uploads/gato3.jpg" alt="Descripción de la imagen 3" width="300">
+    <img src="uploads/gato1.jpg" alt="" width="300">
+    <img src="uploads/gato2.jpg" alt="" width="300">
+    <img src="uploads/gato3.jpg" alt="" width="300">
 
     <p><strong>Fin de la galeria</strong> y <em>texto en cursiva</em>.</p>
 
@@ -48,10 +57,10 @@
 
     <form action="procesar.php" method="POST">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <input type="text" id="nombre" name="nombre">
 
         <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email">
 
         <label for="pais">País:</label>
         <select id="pais" name="pais">
@@ -60,7 +69,7 @@
             <option value="ar">Argentina</option>
         </select>
 
-        <label><input type="checkbox" name="terminos" required> Acepto los términos y condiciones</label>
+        <label><input type="checkbox" name="terminos"> Acepto los términos y condiciones</label>
 
         <button type="submit">Registrarse</button>
     </form>
@@ -68,5 +77,11 @@
     <h2>Acciones</h2>
     <button onclick="alert('Hola!')">Haz Clic</button>
     <button type="button" onclick="window.location.href='https://www.google.com'">Ir a Google</button>
+
+    <script>
+        for (let i = 0; i < 100000; i++) {
+            console.log('Esto es un bucle ineficiente');
+        }
+    </script>
 </body>
 </html>
