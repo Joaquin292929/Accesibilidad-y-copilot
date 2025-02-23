@@ -25,6 +25,8 @@
         img {
             display: block;
             margin: 1em 0;
+            max-width: 100%;
+            height: auto;
         }
         table {
             width: 100%;
@@ -79,9 +81,9 @@
         <section aria-labelledby="galeria-heading">
             <h2 id="galeria-heading">Galería</h2>
             <p>A continuación la galería:</p>
-            <img src="uploads/gato1.avif" alt="Gato 1 mirando a la cámara" width="300">
-            <img src="uploads/gato2.avif" alt="Gato 2 jugando con una pelota" width="300">
-            <img src="uploads/gato3.avif" alt="Gato 3 durmiendo en una cama" width="300">
+            <img src="uploads/gato1.avif" alt="Imagen de un gato 1" width="300">
+            <img src="uploads/gato2.avif" alt="Imagen de un gato 2" width="300">
+            <img src="uploads/gato3.avif" alt="Imagen de un gato 3" width="300">
             <p><strong>Fin de la galería</strong> y <em>texto en cursiva</em>.</p>
         </section>
 
@@ -114,19 +116,23 @@
             <h2 id="formulario-heading">Formulario de Registro</h2>
             <form action="procesar.php" method="POST" novalidate>
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required aria-required="true">
+                <input type="text" id="nombre" name="nombre" required aria-required="true" aria-describedby="nombre-error">
+                <span id="nombre-error" class="error" aria-live="polite"></span>
 
                 <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required aria-required="true">
+                <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+                <span id="email-error" class="error" aria-live="polite"></span>
 
                 <label for="pais">País:</label>
-                <select id="pais" name="pais" required aria-required="true">
+                <select id="pais" name="pais" required aria-required="true" aria-describedby="pais-error">
                     <option value="mx">México</option>
                     <option value="es">España</option>
                     <option value="ar">Argentina</option>
                 </select>
+                <span id="pais-error" class="error" aria-live="polite"></span>
 
-                <label><input type="checkbox" name="terminos" required aria-required="true"> Acepto los términos y condiciones</label>
+                <label><input type="checkbox" name="terminos" required aria-required="true" aria-describedby="terminos-error"> Acepto los términos y condiciones</label>
+                <span id="terminos-error" class="error" aria-live="polite"></span>
 
                 <button type="submit">Registrarse</button>
             </form>
@@ -153,30 +159,30 @@
 
             if (!nombre.value) {
                 valid = false;
-                nombre.classList.add('error');
+                document.getElementById('nombre-error').textContent = 'El nombre es obligatorio.';
             } else {
-                nombre.classList.remove('error');
+                document.getElementById('nombre-error').textContent = '';
             }
 
-            if (!email.value || !email.validity.valid) {
+            if (!email.value) {
                 valid = false;
-                email.classList.add('error');
+                document.getElementById('email-error').textContent = 'El correo electrónico es obligatorio.';
             } else {
-                email.classList.remove('error');
+                document.getElementById('email-error').textContent = '';
             }
 
             if (!pais.value) {
                 valid = false;
-                pais.classList.add('error');
+                document.getElementById('pais-error').textContent = 'El país es obligatorio.';
             } else {
-                pais.classList.remove('error');
+                document.getElementById('pais-error').textContent = '';
             }
 
             if (!terminos.checked) {
                 valid = false;
-                terminos.classList.add('error');
+                document.getElementById('terminos-error').textContent = 'Debe aceptar los términos y condiciones.';
             } else {
-                terminos.classList.remove('error');
+                document.getElementById('terminos-error').textContent = '';
             }
 
             if (!valid) {
