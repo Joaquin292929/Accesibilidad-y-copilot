@@ -1,3 +1,5 @@
+Version ESPAÑOL
+
 Este proyecto demuestra el proceso de mejora de un código mal estructurado mediante el uso de inteligencia artificial, en este caso Copilot, para refactorizar y optimizar el código paso a paso.
 
 1. Código Inicial (Mal Hecho)
@@ -66,27 +68,78 @@ Axe DevTools:
 
 2. Uso de IA para Mejorar el Código
 
-Se introdujo el siguiente prompt en ChatGPT para solicitar mejoras en el código:
+Se introdujo el siguiente prompt en Copilot para solicitar mejoras en el código:
 
-(prompt)
+Objetivo: 
+Hacer que la pagina cumpla con las normativas A, AA y AAA de WCAG 2.2, hacerla accesible, legible, que mantenga un buen, rendimiento, que sea fluida, y que tenga varias practicas recomendadas.
 
-ChatGPT sugirió mejorar el código de la siguiente manera:
-
+Requisitos: 
+Que la página sea accesible y tenga un buen rendimiento. 
+Que tenga un buen contraste (añadir un estilo para los elementos de la pagina). 
+Añade atributos aria para las descripciones. 
+Añade textos alternativos para las imagenes. 
+Añade y elimina todas las etiquetas necesarias. 
+Evita el uso de atributos obsoletos. 
+Añade los metas necesarios. 
+Asegurate de que los encabezados estan jerarquizados. 
+Verifica que los formularios sean accesibles. 
+Añade control de errores en el formulario. 
+Añade estructuras semánticas. 
+Hazlo todo en este html. 
+Elimina todos los elementos innecesarios. 
+Los marcos deben tener atributo title. 
+Todo el contenido de la pagina debe estar incluido en puntos de referencia. 
+Usa un tamaño adecuado para las imagenes.
 
 
 3. Código Optimizado
 
 El resultado final tras aplicar las sugerencias de la IA:
 
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
 
-
+Previsualización de la página:
+![alt text](image-11.png)
+![alt text](image-12.png)
 
 Mejoras Aplicadas
 
-
+Meta tags: Añadidos keywords y author.
+Contraste: Asegurado buen contraste en los botones.
+Atributos ARIA: Añadidos aria-label, aria-labelledby, aria-describedby, y aria-live.
+Textos alternativos: Añadidos alt a las imágenes.
+Jerarquía de encabezados: Verificada y corregida.
+Formularios accesibles: Añadido control de errores y mensajes de error accesibles.
+Estructuras semánticas: Verificadas y corregidas.
+Tamaño de imágenes: Asegurado que las imágenes no excedan el tamaño del contenedor.
 
 
 4. Conclusión
 
-Este experimento demuestra cómo una IA puede ayudar a mejorar la calidad del código al detectar problemas y sugerir buenas prácticas. Integrar herramientas como ChatGPT en el desarrollo puede acelerar la refactorización y optimización del código.
+Este experimento demuestra cómo una IA puede ayudar a mejorar la calidad del código al detectar problemas y sugerir buenas prácticas. Integrar herramientas como Copilot en el desarrollo puede acelerar la refactorización y optimización del código.
 
+Y además concluimos que un ejemplo de un prompt perfecto sería la ya mencionada:
+
+Objetivo: 
+Hacer que la pagina cumpla con las normativas A, AA y AAA de WCAG 2.2, hacerla accesible, legible, que mantenga un buen, rendimiento, que sea fluida, y que tenga varias practicas recomendadas.
+
+Requisitos: 
+Que la página sea accesible y tenga un buen rendimiento. 
+Que tenga un buen contraste (añadir un estilo para los elementos de la pagina). 
+Añade atributos aria para las descripciones. 
+Añade textos alternativos para las imagenes. 
+Añade y elimina todas las etiquetas necesarias. 
+Evita el uso de atributos obsoletos. 
+Añade los metas necesarios. 
+Asegurate de que los encabezados estan jerarquizados. 
+Verifica que los formularios sean accesibles. 
+Añade control de errores en el formulario. 
+Añade estructuras semánticas. 
+Hazlo todo en este html. 
+Elimina todos los elementos innecesarios. 
+Los marcos deben tener atributo title. 
+Todo el contenido de la pagina debe estar incluido en puntos de referencia. 
+Usa un tamaño adecuado para las imagenes.
