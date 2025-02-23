@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página de ejemplo accesible y optimizada">
+    <meta name="keywords" content="accesibilidad, WCAG, ejemplo, HTML">
+    <meta name="author" content="Tu Nombre">
     <title>Ejemplo de Cabeceras</title>
     <style>
         body {
@@ -57,6 +59,9 @@
         button:hover {
             background-color: #1558b0;
         }
+        .error {
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -74,9 +79,9 @@
         <section aria-labelledby="galeria-heading">
             <h2 id="galeria-heading">Galería</h2>
             <p>A continuación la galería:</p>
-            <img src="uploads/gato1.jpg" alt="Gato 1" width="300">
-            <img src="uploads/gato2.jpg" alt="Gato 2" width="300">
-            <img src="uploads/gato3.jpg" alt="Gato 3" width="300">
+            <img src="uploads/gato1.avif" alt="Gato 1 mirando a la cámara" width="300">
+            <img src="uploads/gato2.avif" alt="Gato 2 jugando con una pelota" width="300">
+            <img src="uploads/gato3.avif" alt="Gato 3 durmiendo en una cama" width="300">
             <p><strong>Fin de la galería</strong> y <em>texto en cursiva</em>.</p>
         </section>
 
@@ -107,7 +112,7 @@
 
         <section aria-labelledby="formulario-heading">
             <h2 id="formulario-heading">Formulario de Registro</h2>
-            <form action="procesar.php" method="POST">
+            <form action="procesar.php" method="POST" novalidate>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required aria-required="true">
 
@@ -137,5 +142,47 @@
     <footer>
         <p>&copy; 2025 Ejemplo de Cabeceras. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let valid = true;
+            const nombre = document.getElementById('nombre');
+            const email = document.getElementById('email');
+            const pais = document.getElementById('pais');
+            const terminos = document.querySelector('input[name="terminos"]');
+
+            if (!nombre.value) {
+                valid = false;
+                nombre.classList.add('error');
+            } else {
+                nombre.classList.remove('error');
+            }
+
+            if (!email.value || !email.validity.valid) {
+                valid = false;
+                email.classList.add('error');
+            } else {
+                email.classList.remove('error');
+            }
+
+            if (!pais.value) {
+                valid = false;
+                pais.classList.add('error');
+            } else {
+                pais.classList.remove('error');
+            }
+
+            if (!terminos.checked) {
+                valid = false;
+                terminos.classList.add('error');
+            } else {
+                terminos.classList.remove('error');
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
