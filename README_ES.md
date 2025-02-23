@@ -7,6 +7,10 @@ A continuación, se presenta el código original, que contiene malas prácticas,
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 
+Previsualización de la página:
+
+![alt text](image-6.png)
+
 Problemas Detectados
 
     Contraste de colores:
@@ -47,6 +51,18 @@ Problemas Detectados
     Falta de estructura semántica:
 
         El uso de múltiples etiquetas <h1> puede ser confuso para los lectores de pantalla. Es mejor usar una estructura jerárquica adecuada con <h1>, <h2>, etc.
+
+Resultado de las herramientas de validacion de accesibilidad:
+
+Lighthouse:
+![alt text](image.png)
+![alt text](image-3.png)
+
+Wave:
+![alt text](image-4.png)
+
+Axe DevTools:
+![alt text](image-5.png)
 
 2. Uso de IA para Mejorar el Código
 
